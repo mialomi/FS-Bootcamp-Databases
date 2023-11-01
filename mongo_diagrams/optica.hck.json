@@ -1,0 +1,1057 @@
+{
+    "modelName": "New Model",
+    "collections": [
+        {
+            "collectionName": "Clients",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "Id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "f3472a9e-cbac-49b2-a2ac-b47063dc326b",
+                    "primaryKey": true,
+                    "required": true,
+                    "childRelationships": [
+                        "a74c234a-3b88-438e-8b8b-5f4752ba7ad2",
+                        "4369dcbf-7434-4533-8ffa-ccbe6b70b32e"
+                    ],
+                    "error": {}
+                },
+                {
+                    "name": "Nom",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "7e336ff5-0ef3-460b-99bc-5646cfee66f0",
+                    "id": "IdClient",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Cognom1",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "8f5416a9-7521-4120-809e-d51deb0c1429",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Cognom2",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "0c27b798-ce3f-47d2-8a72-0112fef19a05",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Correu",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "85bd7b41-88d4-4c1a-889d-a7c9a32b43eb",
+                    "format": "email",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Telefon",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "4234a782-c9aa-4e03-8d0a-5ea81f6c98cb",
+                    "mode": "integer32",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Direccio",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "46c15a9f-2113-49fb-aac9-8d96809b5da5",
+                    "error": {}
+                },
+                {
+                    "name": "Data_registre",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "primaryKey": false,
+                    "GUID": "8f946a37-c2d8-4d30-9c2a-8425bc960ca3",
+                    "format": "date-time",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Recomanat",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "f179c39f-ef90-4187-9653-e1a4fc357165",
+                    "foreignCollection": "3610ad78-644c-4f0f-b814-c84defa6a548",
+                    "foreignField": [
+                        "3610ad78-644c-4f0f-b814-c84defa6a548",
+                        "f3472a9e-cbac-49b2-a2ac-b47063dc326b"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "4369dcbf-7434-4533-8ffa-ccbe6b70b32e",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "a3b3bf4b-bcd1-489a-9e9d-e891e69ca99c"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "3610ad78-644c-4f0f-b814-c84defa6a548",
+            "hackoladeMeta": {
+                "namingConvention": ""
+            }
+        },
+        {
+            "collectionName": "Ulleres",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "primaryKey": true,
+                    "GUID": "553a585e-67be-485d-90cd-0a83abe75350",
+                    "childRelationships": [
+                        "e9662a1d-e10c-4c14-88ca-c9242987cf23"
+                    ],
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Marca",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "error": {},
+                    "required": true,
+                    "GUID": "e6e0385e-c1d8-4059-aafd-dd4dbb20b540",
+                    "parentRelationship": "ce2f488d-783d-4368-9203-4a4fdf2ed5bd",
+                    "relationshipType": "Foreign Key"
+                },
+                {
+                    "name": "Graduacio",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "36074dd3-b17a-4e66-b381-1cf41091501b",
+                            "arrayItem": true,
+                            "displayName": "Dreta",
+                            "mode": "decimal128",
+                            "error": {}
+                        },
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "7501ac6b-cb43-4760-88f8-a4980ec3bc14",
+                            "arrayItem": true,
+                            "displayName": "Esquerre",
+                            "mode": "decimal128",
+                            "error": {}
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "d1368240-1af6-41d1-8944-00e932b0601b",
+                    "quantification": {
+                        "GUID": "868f235c-40a1-4fec-b010-78ea66c42a23",
+                        "minUnit": "single",
+                        "likelyUnit": "single",
+                        "maxUnit": "single"
+                    },
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Montura",
+                    "type": "string",
+                    "isActivated": true,
+                    "GUID": "15b94d58-0477-463c-bad1-5fe9299f02f4",
+                    "hackoladeMeta": {},
+                    "required": true,
+                    "enum": [
+                        "Pasta",
+                        "Flotant",
+                        "Metalica"
+                    ],
+                    "error": {},
+                    "default": ""
+                },
+                {
+                    "name": "Color_vidre_dret",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "primaryKey": false,
+                    "GUID": "2fbd7c72-ff1f-4eeb-86d5-db372e890122",
+                    "encrypt": false,
+                    "encryptionOptions": {
+                        "GUID": "c487774f-37e0-46d9-821d-8c994bc9ff42",
+                        "algorithm": "random"
+                    },
+                    "required": true,
+                    "enum": [
+                        "Gris",
+                        "Verd",
+                        "Marro",
+                        "Groc",
+                        "Taronja"
+                    ],
+                    "error": {}
+                },
+                {
+                    "name": "Color_vidre_esquerre",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "4d00d7b6-f074-4bd9-99a2-36ca7ce5bcf3",
+                    "enum": [
+                        "Gris",
+                        "Verd",
+                        "Marro",
+                        "Groc",
+                        "Taronja"
+                    ],
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Preu",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "13422687-6b9d-41b8-8ced-e684eb8e4bde",
+                    "mode": "decimal128",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "d17d7c43-268e-457f-a3cd-e46b6d4b808d"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "c54e6b90-b4d2-4a0b-bcda-5b898418fb7f"
+        },
+        {
+            "collectionName": "Proveidor",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "id",
+                    "hackoladeMeta": {
+                        "namingConvention": ""
+                    },
+                    "isActivated": true,
+                    "type": "objectId",
+                    "primaryKey": true,
+                    "GUID": "d344db9a-2b5e-46c6-a91c-e8dc86daa6aa",
+                    "id": "id",
+                    "required": true,
+                    "error": {},
+                    "childRelationships": [
+                        "8932a16b-b390-4855-9aff-2dccda2766f5"
+                    ]
+                },
+                {
+                    "name": "Nom",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "error": {},
+                    "required": true,
+                    "GUID": "b2ff24fc-f9cc-4a08-bcfa-053d0d7a7163"
+                },
+                {
+                    "name": "Direccio",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "error": {},
+                            "GUID": "dd76cb30-5deb-454f-9a93-4027cbef3626",
+                            "arrayItem": true,
+                            "displayName": "Carrer"
+                        },
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "755e6c5f-3e92-4e7f-af5f-9dac1d9cdaa8",
+                            "arrayItem": true,
+                            "displayName": "Numero",
+                            "mode": "integer32",
+                            "error": {}
+                        },
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "49d10a45-f15f-4312-9858-66d7a40d5838",
+                            "arrayItem": true,
+                            "displayName": "Pis",
+                            "error": {}
+                        },
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "error": {},
+                            "GUID": "4115d107-387c-4c4e-8d69-3f4381cf3ce3",
+                            "arrayItem": true,
+                            "displayName": "Porta"
+                        },
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "GUID": "598ec134-267f-4b45-8c7e-9d4c8c2fc09f",
+                            "arrayItem": true,
+                            "displayName": "Ciutat",
+                            "error": {}
+                        },
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "d2bd761d-a607-41f7-abab-031dc0627244",
+                            "arrayItem": true,
+                            "displayName": "CP",
+                            "error": {}
+                        },
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "GUID": "98bc1466-fa5a-4cce-81f5-1572df5c3490",
+                            "arrayItem": true,
+                            "displayName": "Pais",
+                            "error": {}
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "de228f97-899b-46aa-b9c6-180fe65d04f8",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Telefon",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "numeric",
+                    "GUID": "642944e8-b874-4055-996e-a01d5bd9cd17",
+                    "mode": "integer32",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Correu",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "9ade5403-0750-432a-a0c2-23a0bf9c715c",
+                    "format": "email",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "NIF",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "b76a65d2-7482-4f9b-8a11-3b79c0e4220c",
+                    "required": true,
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "9ebd2d4c-ac2e-452d-8375-5e692f265c3b"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "e6d5421e-360f-454a-8575-e937212944dd"
+        },
+        {
+            "collectionName": "Nova compra",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "Registre_data",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "d3c34fab-66e4-462c-829a-371882b7b9aa",
+                    "format": "date-time",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "0a84ef07-b71f-419d-9bfa-762641efea53",
+                    "primaryKey": true,
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Client",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "faa07dc2-3474-466a-83e7-461b7b8646b9",
+                    "foreignCollection": "3610ad78-644c-4f0f-b814-c84defa6a548",
+                    "foreignField": [
+                        "3610ad78-644c-4f0f-b814-c84defa6a548",
+                        "f3472a9e-cbac-49b2-a2ac-b47063dc326b"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "a74c234a-3b88-438e-8b8b-5f4752ba7ad2",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Comanda",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "numeric",
+                            "GUID": "a768e99a-5718-4f91-a107-9f285ea70aff",
+                            "arrayItem": true,
+                            "displayName": "Quantitat",
+                            "mode": "integer32",
+                            "error": {}
+                        },
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "objectId",
+                            "GUID": "f138a41a-8712-45e5-a8a6-2aec238b9307",
+                            "arrayItem": true,
+                            "parentRelationship": "e9662a1d-e10c-4c14-88ca-c9242987cf23",
+                            "relationshipType": "Foreign Key",
+                            "displayName": "Producte",
+                            "error": {}
+                        }
+                    ],
+                    "additionalItems": true,
+                    "error": {},
+                    "GUID": "90cdd0d5-ab17-45a5-839a-d8f20e81531e"
+                },
+                {
+                    "name": "Treballador",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "c1ae0d59-b536-4278-8342-4cfdf1b22c01",
+                    "required": true,
+                    "primaryKey": true,
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "bd5e775d-5754-4130-af6f-f6d6a241b3d5"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "78158025-278b-47c5-a9f4-bb1cf256ece3"
+        },
+        {
+            "collectionName": "Marca",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "Id",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "d59de5ee-8d93-4612-a864-24c523359b69",
+                    "primaryKey": true,
+                    "required": true,
+                    "error": {},
+                    "childRelationships": [
+                        "ce2f488d-783d-4368-9203-4a4fdf2ed5bd"
+                    ]
+                },
+                {
+                    "name": "Nom",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "75b1a496-19d4-4962-ba29-4d541bc8e805",
+                    "id": "Nom",
+                    "required": true,
+                    "error": {}
+                },
+                {
+                    "name": "Proveidor",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "7d37b4a2-1a74-48b9-8b16-8f78d72f5be0",
+                    "foreignCollection": "e6d5421e-360f-454a-8575-e937212944dd",
+                    "foreignField": [
+                        "e6d5421e-360f-454a-8575-e937212944dd",
+                        "d344db9a-2b5e-46c6-a91c-e8dc86daa6aa"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "8932a16b-b390-4855-9aff-2dccda2766f5",
+                    "required": true,
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "1480a185-5512-4f74-abdf-581542fa523c"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "5c7ce131-6552-4de7-ba6a-15ae8f932ce3"
+        }
+    ],
+    "buckets": [],
+    "views": [],
+    "relationships": [
+        {
+            "name": "fk Nova compra.Client to Clients.ID",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "3610ad78-644c-4f0f-b814-c84defa6a548",
+                    "f3472a9e-cbac-49b2-a2ac-b47063dc326b"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "78158025-278b-47c5-a9f4-bb1cf256ece3",
+                    "faa07dc2-3474-466a-83e7-461b7b8646b9"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "1..n",
+            "GUID": "a74c234a-3b88-438e-8b8b-5f4752ba7ad2",
+            "parentCollection": "3610ad78-644c-4f0f-b814-c84defa6a548",
+            "childCollection": "78158025-278b-47c5-a9f4-bb1cf256ece3",
+            "hackoladeStyles": {
+                "GUID": "54bbaf97-2e6c-469f-8939-2b35791c7dcb",
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 1,
+                "color": "#79c4ff",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1454,
+                        "y": 937
+                    },
+                    {
+                        "x": 1367.166666666667,
+                        "y": 937
+                    },
+                    {
+                        "x": 1367.166666666667,
+                        "y": 839.1666666666671
+                    },
+                    {
+                        "x": 1280.3333333333337,
+                        "y": 839.1666666666671
+                    }
+                ],
+                "sides": [
+                    "left",
+                    "right"
+                ]
+            }
+        },
+        {
+            "name": "fk Nova compra.Comanda.[0] to Ulleres.id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "c54e6b90-b4d2-4a0b-bcda-5b898418fb7f",
+                    "553a585e-67be-485d-90cd-0a83abe75350"
+                ]
+            ],
+            "parentCardinality": "n",
+            "childField": [
+                [
+                    "78158025-278b-47c5-a9f4-bb1cf256ece3",
+                    "90cdd0d5-ab17-45a5-839a-d8f20e81531e",
+                    "f138a41a-8712-45e5-a8a6-2aec238b9307"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "n",
+            "GUID": "e9662a1d-e10c-4c14-88ca-c9242987cf23",
+            "parentCollection": "c54e6b90-b4d2-4a0b-bcda-5b898418fb7f",
+            "childCollection": "78158025-278b-47c5-a9f4-bb1cf256ece3",
+            "hackoladeStyles": {
+                "GUID": "48def6be-4331-473b-866c-4eb493fd7cc2",
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1605.5,
+                        "y": 1021
+                    },
+                    {
+                        "x": 1605.5,
+                        "y": 1102.8333333333333
+                    },
+                    {
+                        "x": 1716.3333333333333,
+                        "y": 1102.8333333333333
+                    },
+                    {
+                        "x": 1716.3333333333333,
+                        "y": 1184.6666666666665
+                    }
+                ],
+                "sides": [
+                    "bottom",
+                    "top"
+                ]
+            }
+        },
+        {
+            "name": "fk Clients.Recomanat to Clients.Id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "3610ad78-644c-4f0f-b814-c84defa6a548",
+                    "f3472a9e-cbac-49b2-a2ac-b47063dc326b"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "3610ad78-644c-4f0f-b814-c84defa6a548",
+                    "f179c39f-ef90-4187-9653-e1a4fc357165"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "1",
+            "GUID": "4369dcbf-7434-4533-8ffa-ccbe6b70b32e",
+            "parentCollection": "3610ad78-644c-4f0f-b814-c84defa6a548",
+            "childCollection": "3610ad78-644c-4f0f-b814-c84defa6a548",
+            "hackoladeStyles": {
+                "GUID": "2fe53e4f-fe0e-4b5c-80ce-3d57185cd123",
+                "autoPositioning": false,
+                "type": "Orthogonal",
+                "thickness": 1,
+                "color": "#f54337",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1280.3333333333348,
+                        "y": 905.6666666666671
+                    },
+                    {
+                        "x": 1305.3333333333348,
+                        "y": 905.6666666666671
+                    },
+                    {
+                        "y": 954.6666666666671,
+                        "x": 1305.3333333333348
+                    },
+                    {
+                        "y": 954.6666666666671,
+                        "x": 1254.3333333333348
+                    },
+                    {
+                        "x": 1254.3333333333348,
+                        "y": 939.6666666666671
+                    }
+                ],
+                "sides": [
+                    "right",
+                    "bottom"
+                ]
+            }
+        },
+        {
+            "name": "fk Marca.Proveidor to Proveidor.id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "e6d5421e-360f-454a-8575-e937212944dd",
+                    "d344db9a-2b5e-46c6-a91c-e8dc86daa6aa"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "5c7ce131-6552-4de7-ba6a-15ae8f932ce3",
+                    "7d37b4a2-1a74-48b9-8b16-8f78d72f5be0"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "n",
+            "GUID": "8932a16b-b390-4855-9aff-2dccda2766f5",
+            "parentCollection": "e6d5421e-360f-454a-8575-e937212944dd",
+            "childCollection": "5c7ce131-6552-4de7-ba6a-15ae8f932ce3",
+            "hackoladeStyles": {
+                "GUID": "aaff6823-6edc-4a6e-93e5-15510e32aed9",
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 1,
+                "color": "#79c4ff",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1119.3333333333335,
+                        "y": 1088
+                    },
+                    {
+                        "x": 1119.3333333333335,
+                        "y": 1131.8333333333335
+                    },
+                    {
+                        "x": 1217.5,
+                        "y": 1131.8333333333335
+                    },
+                    {
+                        "x": 1217.5,
+                        "y": 1175.666666666667
+                    }
+                ],
+                "sides": [
+                    "bottom",
+                    "top"
+                ]
+            }
+        },
+        {
+            "name": "fk Ulleres.Marca to Marca.Id",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "5c7ce131-6552-4de7-ba6a-15ae8f932ce3",
+                    "d59de5ee-8d93-4612-a864-24c523359b69"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c54e6b90-b4d2-4a0b-bcda-5b898418fb7f",
+                    "e6e0385e-c1d8-4059-aafd-dd4dbb20b540"
+                ]
+            ],
+            "isActivated": true,
+            "childCardinality": "n",
+            "GUID": "ce2f488d-783d-4368-9203-4a4fdf2ed5bd",
+            "parentCollection": "5c7ce131-6552-4de7-ba6a-15ae8f932ce3",
+            "childCollection": "c54e6b90-b4d2-4a0b-bcda-5b898418fb7f",
+            "hackoladeStyles": {
+                "GUID": "1404fadc-ed3d-4a86-b772-3af31489d0e3",
+                "autoPositioning": true,
+                "type": "Orthogonal",
+                "thickness": 2,
+                "color": "#79c4ff",
+                "dataType": "",
+                "shape": [
+                    {
+                        "x": 1572.3333333333333,
+                        "y": 1282.1666666666665
+                    },
+                    {
+                        "x": 1395.8333333333335,
+                        "y": 1282.1666666666665
+                    },
+                    {
+                        "x": 1395.8333333333335,
+                        "y": 1035.5
+                    },
+                    {
+                        "x": 1219.3333333333335,
+                        "y": 1035.5
+                    }
+                ],
+                "sides": [
+                    "left",
+                    "right"
+                ]
+            }
+        }
+    ],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "3610ad78-644c-4f0f-b814-c84defa6a548": "Clients",
+        "46c15a9f-2113-49fb-aac9-8d96809b5da5": "Direccio",
+        "4234a782-c9aa-4e03-8d0a-5ea81f6c98cb": "Telefon",
+        "85bd7b41-88d4-4c1a-889d-a7c9a32b43eb": "Correu",
+        "8f946a37-c2d8-4d30-9c2a-8425bc960ca3": "Data_registre",
+        "7e336ff5-0ef3-460b-99bc-5646cfee66f0": "Nom",
+        "8f5416a9-7521-4120-809e-d51deb0c1429": "Cognom1",
+        "0c27b798-ce3f-47d2-8a72-0112fef19a05": "Cognom2",
+        "c54e6b90-b4d2-4a0b-bcda-5b898418fb7f": "Ulleres",
+        "e6e0385e-c1d8-4059-aafd-dd4dbb20b540": "Marca",
+        "d1368240-1af6-41d1-8944-00e932b0601b": "Graduacio",
+        "15b94d58-0477-463c-bad1-5fe9299f02f4": "Montura",
+        "2fbd7c72-ff1f-4eeb-86d5-db372e890122": "Color_vidre_dret",
+        "4d00d7b6-f074-4bd9-99a2-36ca7ce5bcf3": "Color_vidre_esquerre",
+        "13422687-6b9d-41b8-8ced-e684eb8e4bde": "Preu",
+        "553a585e-67be-485d-90cd-0a83abe75350": "id",
+        "e6d5421e-360f-454a-8575-e937212944dd": "Proveidor",
+        "d344db9a-2b5e-46c6-a91c-e8dc86daa6aa": "id",
+        "b2ff24fc-f9cc-4a08-bcfa-053d0d7a7163": "Nom",
+        "de228f97-899b-46aa-b9c6-180fe65d04f8": "Direccio",
+        "642944e8-b874-4055-996e-a01d5bd9cd17": "Telefon",
+        "9ade5403-0750-432a-a0c2-23a0bf9c715c": "Correu",
+        "b76a65d2-7482-4f9b-8a11-3b79c0e4220c": "NIF",
+        "78158025-278b-47c5-a9f4-bb1cf256ece3": "Nova compra",
+        "90cdd0d5-ab17-45a5-839a-d8f20e81531e": "Comanda",
+        "faa07dc2-3474-466a-83e7-461b7b8646b9": "Client",
+        "0a84ef07-b71f-419d-9bfa-762641efea53": "id",
+        "d3c34fab-66e4-462c-829a-371882b7b9aa": "Registre_data",
+        "c1ae0d59-b536-4278-8342-4cfdf1b22c01": "Treballador",
+        "f3472a9e-cbac-49b2-a2ac-b47063dc326b": "Id",
+        "a74c234a-3b88-438e-8b8b-5f4752ba7ad2": "fk Nova compra.Client to Clients.ID",
+        "e9662a1d-e10c-4c14-88ca-c9242987cf23": "fk Nova compra.Comanda.[0] to Ulleres.id",
+        "f179c39f-ef90-4187-9653-e1a4fc357165": "Recomanat",
+        "4369dcbf-7434-4533-8ffa-ccbe6b70b32e": "fk Clients.Recomanat to Clients.Id",
+        "5c7ce131-6552-4de7-ba6a-15ae8f932ce3": "Marca",
+        "d59de5ee-8d93-4612-a864-24c523359b69": "Id",
+        "7d37b4a2-1a74-48b9-8b16-8f78d72f5be0": "Proveidor",
+        "8932a16b-b390-4855-9aff-2dccda2766f5": "fk Marca.Proveidor to Proveidor.id",
+        "ce2f488d-783d-4368-9203-4a4fdf2ed5bd": "fk Ulleres.Marca to Marca.Id",
+        "75b1a496-19d4-4962-ba29-4d541bc8e805": "Nom"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "fd1e5019-9d55-44b0-aaf2-1288a87a71eb"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "8073d10d-85c1-4309-914e-164e2b319cbc"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "cb9523ec-cae1-42b3-aaf6-1959b11955b9"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "v5.0",
+    "dbVendor": "MongoDB",
+    "appTarget": "MONGODB",
+    "creationTS": "2023-08-16T09:54:09.986Z",
+    "GUID": "c5534137-d3af-4cca-a499-3ae9d2b840a8",
+    "isLineageEnabled": false,
+    "lastModifTS": "2023-08-16T14:34:53.614Z",
+    "persistenceSchemaVersion": "6",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "6.10.15"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "3610ad78-644c-4f0f-b814-c84defa6a548",
+                        "x": 1021.3333333333337,
+                        "y": 738.6666666666671,
+                        "width": 259,
+                        "height": 201,
+                        "color": {
+                            "hex": "#fc6c85"
+                        }
+                    },
+                    {
+                        "GUID": "c54e6b90-b4d2-4a0b-bcda-5b898418fb7f",
+                        "x": 1572.3333333333333,
+                        "y": 1184.6666666666665,
+                        "width": 288,
+                        "height": 195,
+                        "color": {
+                            "hex": "#673bb7"
+                        }
+                    },
+                    {
+                        "GUID": "e6d5421e-360f-454a-8575-e937212944dd",
+                        "x": 1096,
+                        "y": 1175.666666666667,
+                        "width": 243,
+                        "height": 268,
+                        "color": {
+                            "hex": "#2196f3"
+                        }
+                    },
+                    {
+                        "GUID": "78158025-278b-47c5-a9f4-bb1cf256ece3",
+                        "x": 1454,
+                        "y": 853,
+                        "width": 303,
+                        "height": 168,
+                        "color": {
+                            "hex": "#40e0d0"
+                        }
+                    },
+                    {
+                        "GUID": "5c7ce131-6552-4de7-ba6a-15ae8f932ce3",
+                        "x": 1019.3333333333336,
+                        "y": 983.0000000000001,
+                        "width": 200,
+                        "height": 105,
+                        "color": {
+                            "hex": "#a4c400"
+                        }
+                    }
+                ],
+                "erdDefinitions": {
+                    "erd": [],
+                    "rootPath": [],
+                    "entities": [],
+                    "decorativeSymbols": []
+                },
+                "buckets": [],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": [
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "3610ad78-644c-4f0f-b814-c84defa6a548"
+                    },
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "c54e6b90-b4d2-4a0b-bcda-5b898418fb7f"
+                    },
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "e6d5421e-360f-454a-8575-e937212944dd"
+                    },
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "78158025-278b-47c5-a9f4-bb1cf256ece3"
+                    },
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "5c7ce131-6552-4de7-ba6a-15ae8f932ce3"
+                    }
+                ],
+                "relationshipUpdateDisabled": false
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}
